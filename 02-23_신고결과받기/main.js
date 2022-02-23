@@ -1,3 +1,6 @@
+// 신고 결과 받기
+// https://programmers.co.kr/learn/courses/30/lessons/92334
+
 function solution(id_list, report, k) {
   //일단 모두 0으로 초기화
   const answer = new Array(id_list.length).fill(0)
