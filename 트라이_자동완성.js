@@ -36,21 +36,6 @@ class Trie {
     }
   }
 
-  getRecommand(string) {
-    let currentNode = this.root;
-
-    for (let char of string) {
-      if (!currentNode.children.has(char)) {
-        return 0;
-      }
-      currentNode = currentNode.children.get(char);
-    }
-    const numberOfRecommand =
-      [...currentNode.children.keys()].length + (currentNode.isWord && 1);
-
-    return numberOfRecommand;
-  }
-
   isOnlyOne(string) {
     let currentNode = this.root;
 
@@ -108,4 +93,4 @@ const solution = (words) => {
 
 const words3 = ["word", "war", "warrior", "world"];
 
-solution(words3);
+console.log(solution(words3));
